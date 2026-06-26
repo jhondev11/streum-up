@@ -1,0 +1,46 @@
+.whyus__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.whyus__card {
+  background: var(--paper);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.whyus__card svg {
+  color: var(--warm);
+  margin-bottom: 4px;
+}
+
+.whyus__card h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.whyus__card p {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+@media (max-width: 880px) {
+  .whyus__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .whyus__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,29 @@
+.floating-wa {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--good);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px -4px rgba(31, 111, 80, 0.45);
+  z-index: 90;
+  transition: transform 0.15s ease;
+}
+
+.floating-wa:hover {
+  transform: scale(1.06);
+}
+
+@media (max-width: 480px) {
+  .floating-wa {
+    width: 50px;
+    height: 50px;
+    bottom: 16px;
+    right: 16px;
+  }
+}

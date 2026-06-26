@@ -1,0 +1,129 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(247, 245, 241, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.header--scrolled {
+  background: rgba(247, 245, 241, 0.92);
+  border-bottom-color: var(--line);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
+}
+
+.header__logo-dot {
+  color: var(--warm);
+}
+
+.header__nav {
+  display: flex;
+  gap: 32px;
+}
+
+.header__nav a {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  transition: color 0.15s ease;
+}
+
+.header__nav a:hover {
+  color: var(--ink);
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__langs {
+  display: flex;
+  gap: 2px;
+  background: var(--paper-dim);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+}
+
+.header__lang {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 5px 9px;
+  border-radius: 3px;
+  color: var(--grey);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.header__lang--active {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.header__burger {
+  display: none;
+  color: var(--ink);
+}
+
+.header__mobile {
+  display: none;
+}
+
+@media (max-width: 880px) {
+  .header__nav {
+    display: none;
+  }
+
+  .header__cta {
+    display: none;
+  }
+
+  .header__burger {
+    display: flex;
+  }
+
+  .header__mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 20px 24px 28px;
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .header__mobile a {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .header__mobile-langs {
+    display: flex;
+    gap: 8px;
+  }
+
+  .header__mobile .btn {
+    width: fit-content;
+  }
+}

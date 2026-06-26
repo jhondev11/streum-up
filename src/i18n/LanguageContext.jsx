@@ -4,12 +4,12 @@ import { translations } from "./translations";
 export const LanguageContext = createContext(null);
 
 function detectInitialLanguage() {
-  if (typeof window === "undefined") return "pt";
+  if (typeof window === "undefined") return "en";
   const stored = window.__lang;
   if (stored && translations[stored]) return stored;
-  const nav = (navigator.language || "pt").slice(0, 2).toLowerCase();
+  const nav = (navigator.language || "en").slice(0, 2).toLowerCase();
   if (translations[nav]) return nav;
-  return "pt";
+  return "en";
 }
 
 export function LanguageProvider({ children }) {

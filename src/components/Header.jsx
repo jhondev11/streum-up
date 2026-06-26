@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Smartphone, Menu, X } from "lucide-react";
+import { Tv, Menu, X } from "lucide-react";
 import { useLanguage } from "../i18n/useLanguage";
 import { languages } from "../i18n/translations";
 import { telegramLink } from "../utils/whatsapp";
@@ -27,7 +27,7 @@ export default function Header() {
     <header className={`header ${scrolled ? "header--scrolled" : ""}`}>
       <div className="container header__inner">
         <a href="#top" className="header__logo">
-          <Smartphone size={20} strokeWidth={2.4} />
+          <Tv size={20} strokeWidth={2.4} />
           <span>
             StreamUp<span className="header__logo-dot">.</span>
           </span>
@@ -54,12 +54,7 @@ export default function Header() {
               </button>
             ))}
           </div>
-          <a
-            href={telegramLink(lang)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-warm btn-sm header__cta"
-          >
+          <a href="#plans" className="btn btn-warm btn-sm header__cta">
             {t.nav.cta}
           </a>
           <button
@@ -91,12 +86,7 @@ export default function Header() {
               </button>
             ))}
           </div>
-          <a
-            href={telegramLink(lang)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-warm"
-          >
+          <a href="#plans" className="btn btn-warm">
             {t.nav.cta}
           </a>
         </div>

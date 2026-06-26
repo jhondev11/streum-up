@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { LanguageProvider } from "./i18n/LanguageContext";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Plans from "./components/Plans";
@@ -26,7 +25,7 @@ export default function App() {
   };
 
   return (
-    <LanguageProvider>
+    <>
       <Header />
       <main>
         {currentPage === "home" && (
@@ -46,6 +45,6 @@ export default function App() {
       </main>
       <Footer onNavigate={handleNavigate} />
       <FloatingWhatsapp />
-    </LanguageProvider>
+    </>
   );
 }

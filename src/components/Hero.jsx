@@ -1,4 +1,4 @@
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, MessageCircle, ShieldCheck, Globe, Clock } from "lucide-react";
 import { useLanguage } from "../i18n/useLanguage";
 import { telegramLink } from "../utils/whatsapp";
 import "./Hero.css";
@@ -35,6 +35,34 @@ export default function Hero() {
             </a>
           </div>
 
+          <div className="hero__proof" aria-label="social proof">
+            <span className="hero__proof-pill">★ {t.hero.socialProof}</span>
+          </div>
+
+          <div className="hero__trust-grid">
+            <div className="hero__trust-card">
+              <ShieldCheck size={18} />
+              <div>
+                <strong>{t.hero.trust1value}</strong>
+                <span>{t.hero.trust1label}</span>
+              </div>
+            </div>
+            <div className="hero__trust-card">
+              <Globe size={18} />
+              <div>
+                <strong>{t.hero.trust2value}</strong>
+                <span>{t.hero.trust2label}</span>
+              </div>
+            </div>
+            <div className="hero__trust-card">
+              <Clock size={18} />
+              <div>
+                <strong>{t.hero.trust3value}</strong>
+                <span>{t.hero.trust3label}</span>
+              </div>
+            </div>
+          </div>
+
           <div className="hero__stats">
             <div className="hero__stat">
               <span className="hero__stat-value mono">{t.hero.stat1value}</span>
@@ -60,35 +88,38 @@ export default function Hero() {
             </div>
             <div className="inspect-tag__row">
               <span>StreamUp Plan</span>
-              <span className="mono">6 months</span>
+              <span className="mono">12 months</span>
             </div>
-            <div className="inspect-tag__divider" />
             <div className="inspect-tag__checks">
               <div className="inspect-tag__check">
                 <span>Live channels</span>
-                <span className="mono inspect-tag__pass">55.2k+</span>
+                <span className="inspect-tag__pass">55k+ — up to 4K Ultra HD</span>
               </div>
               <div className="inspect-tag__check">
                 <span>Movies</span>
-                <span className="mono inspect-tag__pass">170k+</span>
+                <span className="inspect-tag__pass">170k+ movies on-demand</span>
               </div>
               <div className="inspect-tag__check">
                 <span>Series</span>
-                <span className="mono inspect-tag__pass">45k+</span>
+                <span className="inspect-tag__pass">+45k complete series</span>
+              </div>
+              <div className="inspect-tag__check">
+                <span>Quality</span>
+                <span className="inspect-tag__pass">Full HD &amp; Ultra HD</span>
               </div>
               <div className="inspect-tag__check">
                 <span>Compatible</span>
-                <span className="mono inspect-tag__pass">Mobile, Smart TV</span>
+                <span className="inspect-tag__pass">Mobile, Smart TVs, iPhone, Androids, etc.</span>
               </div>
               <div className="inspect-tag__check">
-                <span>Setup help</span>
-                <span className="mono inspect-tag__pass">Telegram</span>
+                <span>Support</span>
+                <span className="inspect-tag__pass">Telegram support (fast setup &amp; dedicated help)</span>
               </div>
             </div>
             <div className="inspect-tag__divider" />
             <div className="inspect-tag__price">
-              <span className="inspect-tag__price-new mono">30.00€</span>
-              <span className="inspect-tag__price-old mono">≈€5.00/mo</span>
+              <span className="inspect-tag__price-new mono">45.00€</span>
+              <span className="inspect-tag__price-old mono">≈€3.75/mo</span>
             </div>
           </div>
           <div className="hero__visual-card hero__visual-card--back" />
